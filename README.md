@@ -37,7 +37,8 @@ First, open the website by typing in url http://192.168.0.142
 Then, `gobuster` was used for additional directory enumeration using the following command:
 
 ```bash
-gobuster dir -u http://192.168.0.142 \ -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt```
+gobuster dir -u http://192.168.0.142 \ -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt
+```
 
 This scan discovered the `/hidden_text` directory with a 200 OK status.
 
@@ -131,7 +132,7 @@ When running the feedback script, `test` was entered as the name, and `/bin/bash
 * Run through the command to find user2.txt as a second flag inside it.
 Now u got the second flag: Fl4g{y0ur34ch3du53r25uc355ful1y}
 
-## 8. Privilege Escalation: Jerry to Root
+## 9. Privilege Escalation: Jerry to Root
 The `id` command revealed that the user `jerry` was a member of the `docker` group (gid 114).
 
 This privilege was exploited by running a Docker container to mount the root directory using the command :
